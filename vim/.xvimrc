@@ -1,0 +1,148 @@
+" Visual mode add surround
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Insert action like ternimal
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <c-f> <Right>
+inoremap <c-b> <left>
+inoremap <c-a> <Esc>^i
+inoremap <c-e> <Esc>$a
+inoremap <c-w> <Esc>diwi
+inoremap <c-u> <Esc>cc
+
+set number
+set hlsearch
+set guioptions=r
+set laststatus=2
+"""""""""""""""""""""""""""""""""""""""""
+" assistant editor and jump between Frame
+"""""""""""""""""""""""""""""""""""""""""
+" show standard editor to close assistant editor
+"map <space>sa :xccmd changeToGeniusEditor<CR>
+" add new assistant editor
+"map <space>aa :xccmd addAssistantEditor<CR>
+" del one assistant editor
+"map <space>da :xccmd removeAssistantEditor<CR>
+
+" move between windows
+map <C-j> <C-w>j<CR>
+map <C-k> <C-w>k<CR>
+map <C-h> <C-w>h<CR>
+map <C-l> <C-w>l<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tab
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tab new
+map <space>to :xccmd newTab<CR>
+" tab close
+map <space>tc :tabclose<CR>
+" tab pre
+map <space>tt :xccmd selectPreviousTab<CR>
+" tab next
+map <space>tn :xccmd selectNextTab<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" View
+" Note: standard editor shortkey is convenient
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Code Snippet Library
+map <space>cs :xcmenucmd Show Code Snippet Library<CR>
+" File Template Library
+""map <space>ft :xcmenucmd Show File Template Library<CR>
+" Media Library
+"map <space>ml :xcmenucmd Show Media Library<CR>
+" (Quick) help Inspector
+map <space>hi :xcmenucmd Show Quick Help Inspector<CR>
+" File inspector
+map <space>fi :xcmenucmd Show File Inspector<CR>
+
+" toggle navigator, debug area, utilities, ToolBar
+" l-left, b-bottom, r-right, t-top or toolbar
+map <f1> :xccmd toggleNavigatorsVisibility<CR>
+map <f2> :xccmd toggleDebuggerVisibility<CR>
+map <f3> :xccmd toggleUtilitiesVisibility<CR>
+map <space>tt :xccmd toggleToolbarShown<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigate
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" dc-debug console
+map <space>dc :xcmenucmd Activate Console<CR>
+
+" open current file in selected editor
+"map <space>oi :xcmenucmd Open in…<CR>
+" ctrl+i/o maybe better
+map <C-i> :xccmd goForwardInHistoryByCommand<CR>
+map <C-o> :xccmd goBackInHistoryByCommand<CR>
+"map <space>f :xccmd goForwardInHistoryByCommand<CR>
+"map <space>b :xccmd goBackInHistoryByCommand<CR>
+"map <space>jd :xcmenucmd Jump to Definition<CR> use gd instead.
+map <space>jn :xcmenucmd Jump to Next Issue<CR>
+"map <space>ni :xcmenucmd Fix Next Issue<CR>
+map <space>jp :xcmenucmd Jump to Previous Issue<CR>
+"map <space>pi :xcmenucmd Fix Previous Issue<CR>
+
+" switch between .h/.m
+" You can use vim cmd |gd| and |ctrl+i/o| to navigate between files.
+map <space>n :xccmd jumpToNextCounterpart<CR>
+" place holder is Like <#...#>,  jump to placeholder then use Key <Tab>.
+"map <space>np :xccmd selectNextPlaceholder<CR>
+"map <space>pp :xccmd selectPreviousPlaceholder<CR>
+
+" reveal file or symbol
+map <space>pr :xccmd revealInProjectNavigator<CR>
+"map <space>sr :xccmd revealInSymbolNavigator<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Project
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"map <space>r  :run<CR>
+map <space>bp  :xcmenucmd Build<CR>
+map <space>cp  :xcmenucmd Clean<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Miscellaneous
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"quick save and quit
+map <space>w :w<CR>
+
+set ignorecase
+
+" search the string cursor points to. Very Usefull.
+map <space>s viw:xccmd findSelectedTextInWorkspace<CR>
+
+" search document for text cursor points to.
+map <space>hh :xccmd searchDocumentationForSelectedText<CR>
+
+" Filter file (view menus achieve the goal too)
+map <space>fn :xcmenucmd Filter in Navigator<CR>
+map <space>fl :xcmenucmd Filter in Library<CR>
+
+" Open Quickly
+" Note: slower then short key |cmd+shift+o|
+map <c-p>  :xccmd openQuickly<CR>
+" Close Window
+map <space>cw  :xccmd performClose<CR>
+" close current file
+map <space>q  :xccmd closeDocument<CR>
+" show in Finder
+map <space>in  :xccmd showInFinder<CR>
+" cmd+L, go to line
+map <space>l  :xccmd openQuicklyScoped<CR>
+
+" save when esc
+ino <Esc> <Esc>:xcmenucmd Save<CR>
+
+nnoremap <CR> <c-m>
+vnoremap <CR> s
+
+" quick add ; at end of statement
+inoremap <c-;> <ESC>A;<ESC>o
+
+" Move by line in normal mode
+" <c-e>  move up
+" <c-y>  move down
+map <space><CR> :noh<CR>
+
+map <space>== ggVG==
+map Y $v^y

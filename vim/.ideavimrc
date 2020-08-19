@@ -1,0 +1,41 @@
+let mapleader = " "
+
+"" Ignore case when searching
+set ignorecase
+" When searching try to be smart about cases 
+set smartcase
+
+" Visual mode add surround
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Insert action like ternimal
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <c-f> <Right>
+inoremap <c-b> <left>
+inoremap <c-a> <Esc>^i
+inoremap <c-e> <Esc>$a
+inoremap <c-w> <Esc>diwi
+inoremap <c-u> <Esc>cc
+nnoremap * *zz
+nnoremap # #zz
+nnoremap n nzz
+nnoremap N Nzz
+
+set number
+set hlsearch
+set guioptions=r
+set laststatus=0
+
+set nu!
+set norelativenumber
+set selectmode+=refactoring
+nmap <leader>f :action KJumpAction<cr>
+nnoremap <c-w>n :split<cr>
+
+map <F1> :action ActivateProjectToolWindow<cr>
+map <F2> :action ActivateStructureToolWindow<cr>
+map <F3> :action ActivateDebugToolWindow<cr>
+map <F4> :action ToggleLineBreakpoint<cr>
+map <M-d> :action Debug<cr>
+map <leader>q :action HideAllWindows<cr>
+map <leader>f :action FindInPath<cr>
+map <c-p> :action SearchEverywhere<cr>

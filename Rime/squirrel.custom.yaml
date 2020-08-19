@@ -1,0 +1,15 @@
+# 编辑 `squirrel.custom.yaml`
+patch:
+    app_options/+:   # /+为追加的意思
+        'com.runningwithcrayons.Alfred-3':
+            ascii_mode: true
+        'net.kovidgoyal.kitty':
+            ascii_mode: true
+        'com.runningwithcrayons.Alfred':
+            ascii_mode: true
+        'org.vim.MacVim':
+            ascii_mode: true
+        'neovim-qt':
+            ascii_mode: true
+        'com.apple.dt.Xcod':
+            ascii_mode: true
