@@ -171,8 +171,8 @@ colors:
     background: '0xffffff'
     foreground: '0x000000'
   primary:
-    background: '0x282828'
-    foreground: '0xebdbb2'
+    background: '0x2a2426'
+    foreground: '0xe6d6ac'
 
 
     # Bright and dim foreground colors
