@@ -25,6 +25,7 @@ if [ ${machine} == Mac ]; then
     brew install tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     cp ~/.dotfiles/terminal/.tmux.conf ~/
+    cp ~/.dotfiles/terminal/tmux.status.conf ~/.tmux.status.conf
     tmux source ~/.tmux.conf
     ~/.tmux/plugins/tpm/bin/install_plugins
     brew install bat git-delta
