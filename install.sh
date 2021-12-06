@@ -19,6 +19,7 @@ if [ ${machine} == Mac ]; then
     cp ~/.dotfiles/terminal/kitty.conf ~/.config/kitty
     cp ~/.dotfiles/terminal/gruvbox-kitty.conf ~/.config/kitty
     cp ~/.dotfiles/terminal/.zshrc ~/
+    cp ~/.dotfiles/terminal/.zimrc ~/
     cp ~/.dotfiles/terminal/.zshenv ~/
     cp ~/.dotfiles/terminal/.p10k.zsh ~/
 
@@ -43,6 +44,7 @@ if [ ${machine} == Linux ]; then
     cp ~/.dotfiles/terminal/kitty.conf ~/.config/kitty
     cp ~/.dotfiles/terminal/gruvbox-kitty.conf ~/.config/kitty
     cp ~/.dotfiles/terminal/.zshrc ~/
+    cp ~/.dotfiles/terminal/.zimrc ~/
     cp ~/.dotfiles/terminal/.zshenv ~/
     cp ~/.dotfiles/terminal/.p10k.zsh ~/
 
