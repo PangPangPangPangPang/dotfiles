@@ -3,13 +3,23 @@ patch:
     app_options/+:   # /+为追加的意思
         'com.runningwithcrayons.Alfred-3':
             ascii_mode: true
+            vim_mode: true
         'net.kovidgoyal.kitty':
             ascii_mode: true
-        'com.runningwithcrayons.Alfred':
+            vim_mode: true
+        'org.alacritty':
             ascii_mode: true
+            vim_mode: true
+        'com.neovide.neovide':
+            ascii_mode: true
+            vim_mode: true
+        'com.raycast.macos':
+            ascii_mode: true
+            vim_mode: true
         'org.vim.MacVim':
             ascii_mode: true
         'neovim-qt':
             ascii_mode: true
-        'com.apple.dt.Xcod':
+        'com.apple.dt.Xcode':
             ascii_mode: true
+            vim_mode: true
