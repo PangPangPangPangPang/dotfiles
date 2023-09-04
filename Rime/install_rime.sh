@@ -1,0 +1,21 @@
+# !/bin/bash
+
+ma="$(uname -s)"
+case "${ma}" in
+    Linux*) machine=Linux;;
+    Darwin*) machine=Mac;;
+    CYGWIN*) machine=Cygwin;;
+    MINGW*) machine=MinGw;;
+    *) machine=UNKNOWN
+esac
+
+MYDIR=`dirname $0`
+
+if [ ${machine} == Mac ]; then
+    rm -rf ~/Library/Rime
+    git clone --depth 1 https://github.com/iDvel/rime-ice.git ~/Library/Rime
+    cp ~/.dotfiles/Rime/* ~/Library/Rime/
+fi
+
+if [ ${machine} == Linux ]; then
+fi

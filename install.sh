@@ -31,7 +31,6 @@ if [ ${machine} == Mac ]; then
     ~/.tmux/plugins/tpm/bin/install_plugins
     brew install bat git-delta
     brew install fontconfig
-    sh ~/.dotfiles/font/install_font.sh
 fi
 
 if [ ${machine} == Linux ]; then
@@ -53,6 +52,7 @@ if [ ${machine} == Linux ]; then
     cp ~/.dotfiles/terminal/tmux.status.conf ~/.tmux.status.conf
     tmux source ~/.tmux.conf
     ~/.tmux/plugins/tpm/bin/install_plugins
-    sh ~/.dotfiles/font/install_font.sh
 fi
 
+sh ~/.dotfiles/font/install_font.sh
+sh ~/.dotfiles/Rime/install_rime.sh
