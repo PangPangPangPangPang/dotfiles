@@ -18,3 +18,7 @@ patch:
       Control_R: noop
       Caps_Lock: clear
       Eisu_toggle: clear
+  switcher:
+    hotkeys:
+      - Control+grave
+      - Control+Shift+grave
