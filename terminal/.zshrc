@@ -2,6 +2,7 @@ setopt HIST_IGNORE_ALL_DUPS
 bindkey -e
 WORDCHARS=${WORDCHARS//[\/]}
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZIM_HOME=~/.zim
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   # Download zimfw script if missing.
   command mkdir -p ${ZIM_HOME}
