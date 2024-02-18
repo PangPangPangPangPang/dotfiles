@@ -21,3 +21,4 @@ export PATH="$PATH:$HOME/.pub-cache/bin"
 
 export FZF_DEFAULT_OPTS="--bind 'enter:execute(nvim {})' --height 40% --layout=reverse --border"
 export FZF_PREVIEW_COMMAND='bat --color=always --style=plain --theme=TwoDark -n -- {} || cat {}'
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'

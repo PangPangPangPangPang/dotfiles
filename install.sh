@@ -11,6 +11,7 @@ if [ ${machine} == Mac ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew install exa
     brew install ripgrep
+    brew install fd
     brew cask install kitty
     brew install --HEAD neovim
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
@@ -34,7 +35,7 @@ if [ ${machine} == Mac ]; then
 fi
 
 if [ ${machine} == Linux ]; then
-    yay -S exa ripgrep alacritty neovim tmux git-delta bat python2-pip python-pip
+    yay -S exa ripgrep alacritty neovim tmux git-delta bat python2-pip python-pip fd
     python3 -m pip install --user --upgrade pynvim
     python -m pip install --user --upgrade pynvim
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
